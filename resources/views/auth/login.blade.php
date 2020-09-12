@@ -4,7 +4,7 @@
 
     <div class="login-box">
         <div class="login-logo">
-            <b>Admin</b>Blog
+            <b>{{ config('app.name') }}</b>
         </div>
         <!-- /.login-logo -->
         <div class="card">

@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use App\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -24,6 +25,7 @@ class UsersTableSeeder extends Seeder
 				'email' => 'rodrigopaco.1986@gmail.com', 
 				'password' => Hash::make('Admin123_'),
 				'created_at' => Carbon::now(),
+				'type'	=> User::TYPE_ADMIN,
 			],
 			[
 				'id' => '2', 
@@ -31,6 +33,7 @@ class UsersTableSeeder extends Seeder
 				'email' => 'anthony@projectmark.com', 
 				'password' => Hash::make('Admin123_'),
 				'created_at' => Carbon::now(),
+				'type'	=> User::TYPE_ADMIN,
 			],
         ]);
 

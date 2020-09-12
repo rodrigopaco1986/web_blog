@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ url('admin/dashboard') }}" class="brand-link">
-        <span class="brand-text font-weight-light ml-3">Blog Admin</span>
+        <span class="brand-text font-weight-light ml-3">{{ config('app.name') }}</span>
     </a>
 
     <!-- Sidebar -->
