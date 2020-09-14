@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Post;
+use Auth;
 
 class DashboardController extends Controller
 {
@@ -13,6 +15,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $nPost = Post::select()
+            ->OfOwner(Auth::user())
+            ->count();
+
+        return view('admin.dashboard')
+        	->with('nPost', $nPost);
     }
 }

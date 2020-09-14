@@ -14,9 +14,10 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function ($router) {
 	Route::group(['prefix'=>'admin'], function ($router) {
-		Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard');	
+		Route::get('dashboard', 'Admin\DashboardController@index')->name('dashboard');
+		Route::resource('posts', 'Admin\PostController');
 	});
-	Route::get('/home', 'Admin\DashboardController@index')->name('home');
+	Route::get('home', 'Admin\DashboardController@index')->name('home');
 	Route::get('/', 'Admin\DashboardController@index');
 });
 

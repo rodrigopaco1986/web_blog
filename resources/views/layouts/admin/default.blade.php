@@ -30,14 +30,8 @@
 
                 <!-- Main content -->
                 <section class="content">
-                    <!-- Default box -->
-                    <div class="card">
-                        <div class="card-body">
-                            @yield('content')
-                        </div>
-                        <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
+                    @include('flash::message')
+                    @yield('content')
                 </section>
                 <!-- /.content -->
             </div>
@@ -53,7 +47,12 @@
         </div>
         <!-- ./wrapper -->
 
+        @yield('css')
+
         <!-- Main scripts -->
         <script src="{{ mix('admin/js/default.js') }}"></script>
+
+        @yield('js')
+        
     </body>
 </html>

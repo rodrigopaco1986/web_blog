@@ -9,9 +9,11 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "caffeinated/flash": "^4.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.18.35",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.2"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -32,6 +34,9 @@
         }
     },
     "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
         "psr-4": {
             "App\\": "app/"
         },
