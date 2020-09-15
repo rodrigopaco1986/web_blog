@@ -21,6 +21,8 @@ Route::group(['middleware' => 'auth'], function ($router) {
 	Route::get('/', 'Admin\DashboardController@index');
 });
 
+Route::get('/', 'Blog\PostController@index');
+
 
 
 
