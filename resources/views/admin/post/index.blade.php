@@ -49,7 +49,7 @@
                             @linkOrder([
                                 'title' => 'Created by',
                                 'name'  => 'user_id',
-                                'url' => route('posts.index', ['sort_by' => 'user_name', 'sort_dir' => $sd_alt]),
+                                'url' => route('posts.index', ['sort_by' => 'user_id', 'sort_dir' => $sd_alt]),
                                 'sb' => $sb,
                                 'sd' => $sd,
                             ]) 

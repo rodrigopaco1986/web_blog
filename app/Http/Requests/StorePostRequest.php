@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Auth;
 
 class StorePostRequest extends FormRequest
 {
@@ -28,5 +29,18 @@ class StorePostRequest extends FormRequest
             'description' => 'required|min:3',
             'publicated' => 'required|in:1,0'
         ];
+    }
+
+    protected function prepareForValidation()
+    {
+        $input = $this->all();
+
+        $user  = Auth::user();
+
+        if (!$user->isAdmin()) {
+            $input['publicated']  = '1';
+        }
+        
+        $this->merge($input);
     }
 }

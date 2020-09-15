@@ -18,15 +18,17 @@
 	        ])
 	        @endfrmTextarea
 	    </div>
-	    <div class="col-12">
-	        @frmInputCheckbox([
-	            'name'      => 'publicated',
-	            'title'     => 'Publicated?',
-	            'disabled'  => $disabled,
-	            'checked'	=> (bool)($post->publication_date ?? false),
-	        ])
-	        @endfrmInputCheckbox
-	    </div>
+	    @if(Auth::user()->isAdmin())
+		    <div class="col-12">
+		        @frmInputCheckbox([
+		            'name'      => 'publicated',
+		            'title'     => 'Publicated?',
+		            'disabled'  => $disabled,
+		            'checked'	=> (bool)($post->publication_date ?? false),
+		        ])
+		        @endfrmInputCheckbox
+		    </div>
+	    @endif
 	</div>
 </div>
 <div class="card-footer">
