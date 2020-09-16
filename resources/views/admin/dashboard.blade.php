@@ -2,12 +2,6 @@
 
 @section('title', 'Home')
 
-@section('breadcrumb')
-<ol class="breadcrumb float-sm-right">
-	<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-</ol>
-@endsection
-
 @section('content')
 
 <div class="row">

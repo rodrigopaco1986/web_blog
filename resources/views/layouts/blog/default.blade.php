@@ -14,22 +14,12 @@
         </div>
         <!-- /.content-wrapper -->
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-            <div class="p-3">
-              <h5>Title</h5>
-              <p>Sidebar content</p>
-          </div>
-      </aside>
-      <!-- /.control-sidebar -->
+        @include('layouts.blog.partials.footer')
 
-      @include('layouts.blog.partials.footer')
+    </div>
+    <!-- ./wrapper -->
 
-  </div>
-  <!-- ./wrapper -->
-
-  <!-- Main scripts -->
-  <script src="{{ mix('admin/js/default.js') }}"></script>
+    <!-- Main scripts -->
+    <script src="{{ mix('admin/js/default.js') }}"></script>
 </body>
 </html>

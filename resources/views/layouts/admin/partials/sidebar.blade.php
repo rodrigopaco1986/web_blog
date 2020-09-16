@@ -21,9 +21,17 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('posts.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             Posts
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('/') }}" class="nav-link">
+                        <i class="nav-icon fas fa-blog"></i>
+                        <p>
+                            Go to Blog
                         </p>
                     </a>
                 </li>
