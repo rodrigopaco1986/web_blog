@@ -65,6 +65,18 @@
                             ]) 
                             @endlinkOrder
                         </th>
+                        @if(Auth::user()->isAdmin())
+                            <th>
+                                @linkOrder([
+                                    'title' => 'Source',
+                                    'name'  => 'source',
+                                    'url' => route('posts.index', ['sort_by' => 'source', 'sort_dir' => $sd_alt]),
+                                    'sb' => $sb,
+                                    'sd' => $sd,
+                                ]) 
+                                @endlinkOrder
+                            </th>
+                        @endif
                         <th style="width: 150px"></th>
                     </tr>
                 </thead>
@@ -77,6 +89,9 @@
                             <td>{{ $post->publication_date }}</td>
                             <td>{{ $post->user->name }}</td>
                             <td>{{ $post->created_at }}</td>
+                            @if(Auth::user()->isAdmin())
+                                <td>{{ $post->source }}</td>
+                            @endif
                             <td>
                                 @can('view', $post)
                                 <a href="{{ route('posts.show', ['post' => $post->id]) }}" class="btn btn-default btn-sm" title="View">
@@ -99,7 +114,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5">No records</td>
+                            <td colspan="{{ (Auth::user()->isAdmin() ? '8' : '7') }}">No records</td>
                         </tr>
                     @endforelse
                 </tbody>
