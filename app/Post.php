@@ -8,13 +8,14 @@ use App\User;
 
 class Post extends Model
 {
+    const SOURCE_WEB = 'web';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'publication_date', 'user_id',
+        'title', 'description', 'publication_date', 'source', 'user_id',
     ];
 
     public function getCreatedAtAttribute($value)

@@ -51,4 +51,10 @@ class User extends Authenticatable
     {
         return $this->type == User::TYPE_ADMIN;
     }
+
+    public function scopeAdmin($query)
+    {
+        return $query->where('type', self::TYPE_ADMIN)
+            ->orderBy('id', 'asc');
+    }
 }
