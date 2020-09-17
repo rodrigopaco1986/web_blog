@@ -21,7 +21,7 @@ This is a test project about a web blogging platform, developed using Laravel 6.
 8) php artisan db:seed
 9) Set up de codebase in a virtual host (apache, nginx, etc) or run php artisan serve
 
-##Notes
+## Notes
 1) Credentials of two default admin users are in: database/seeds/UsersTableSeeder.php
 2) Command to import posts from "https://sq1-api-test.herokuapp.com/posts" can be executed automatically (every hour), creating a cron job (set up to run evey minute) and add this settings:
 		* * * * * cd /path-to-your-PROJECT_NAME && php artisan schedule:run >> /dev/null 2>&1
