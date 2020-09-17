@@ -5,9 +5,9 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <!-- Main styles -->
-    <link rel="stylesheet" href="{{ mix('admin/css/default.css') }}" />
+    <link rel="preload" href="{{ mix('admin/css/default.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>

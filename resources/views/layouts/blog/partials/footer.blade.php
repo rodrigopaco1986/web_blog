@@ -5,5 +5,5 @@
 		Developed by Rodrigo Paco.
 	</div>
 	<!-- Default to the left -->
-	<strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+	<strong>Copyright &copy; {{ date('Y') }} <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
 </footer>

@@ -20,6 +20,6 @@
     <!-- ./wrapper -->
 
     <!-- Main scripts -->
-    <script src="{{ mix('admin/js/default.js') }}"></script>
+    <script defer src="{{ mix('admin/js/default.js') }}"></script>
 </body>
 </html>
