@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('components.link-order', 'linkOrder');
         Blade::component('components.form.input-checkbox', 'frmInputCheckbox');
         Blade::component('components.form.input-text', 'frmInputText');
+        Blade::component('components.form.input-password', 'frmInputPassword');
         Blade::component('components.form.select', 'frmSelect');
         Blade::component('components.form.textarea', 'frmTextarea');
     }
