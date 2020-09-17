@@ -2,6 +2,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{ config('app.name') }}</title>
+    
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" />
+    <link rel="icon" href="{{ asset('favicon.png') }}">
+    <link rel="image_src" href="{{ asset('favicon.png') }}" />
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Ionicons -->

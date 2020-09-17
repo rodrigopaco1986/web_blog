@@ -7,6 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Simple web blogging platform
+This is a test project about a web blogging platform, developed using Laravel 6.0 adn AdminLte web template
+
+## How to install
+1) git clone https://github.com/rodrigopaco1986/web_blog.git PROJECT_NAME
+2) cd PROJECT_NAME
+3) composer install
+4) yarn install (or npm install)
+5) yarn run production (or npm run production)
+6) cp .env.example .env (update .env with the right database credentials and email settings to use the reset password feature)
+7) php artisan migrate
+8) php artisan db:seed
+9) Set up de codebase in a virtual host (apache, nginx, etc) or run php artisan serve
+
+NOTES
+a) Credentials of two default admin users are in: database/seeds/UsersTableSeeder.php
+b) Command to import posts from "https://sq1-api-test.herokuapp.com/posts" can be executed automatically (every hour), creating a cron job (set up to run evey minute) and add this settings:
+		* * * * * cd /path-to-your-PROJECT_NAME && php artisan schedule:run >> /dev/null 2>&1
+		(Refer to https://laravel.com/docs/6.x/scheduling)
+c) Command to import posts also can be executed manually when it's needed:
+	- php artisan import:posts
+d) Different sources of imported posts can be added to the command. The default one is source=api_rest. It's just needed to create a new class that implements App\Import\Importer and update the factory class App\Import\Post\StaticFactory. See App\Import\Post\ApiRestImporter as an example.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

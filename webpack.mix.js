@@ -29,4 +29,5 @@ mix
 	], 'public/admin/js/default.js')
 	.copyDirectory('resources/js/adminlte/plugins/fontawesome-free/webfonts', 'public/admin/webfonts')
 	.copyDirectory('resources/js/adminlte/plugins/summernote/font', 'public/admin/css/font')
-	.copyDirectory('resources/img/adminlte', 'public/admin/img');
+	.copyDirectory('resources/img/adminlte', 'public/admin/img')
+	.copyDirectory('resources/img/favicons', 'public');
